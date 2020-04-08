@@ -1,0 +1,21 @@
+<h1>List of Todos</h1>
+<!-- <app-search></app-search> -->
+<div class="col-md-12">
+  <div class="col-md-3">
+    <h3>Search : </h3>
+  </div>
+  <div class="col-md-6 form-group">
+    <input type="text" class="form-control" placeholder="Search by title" [(ngModel)]= "searchTerm"/>
+  </div>
+</div> 
+<div class="co-md-12">
+    <ul> 
+      <li *ngFor="let track of filteredtodos">
+        <b>Title</b>: {{track.title}}
+        <b>Id :</b> {{track.id}} 
+        <b>User ID :</b> {{track.userId}}
+        <b>Completed : </b> {{track.completed}}
+      </li>
+    </ul>
+</div>
+
